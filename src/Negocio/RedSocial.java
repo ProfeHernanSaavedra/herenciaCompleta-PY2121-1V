@@ -16,6 +16,13 @@ public class RedSocial extends Interes implements ILikeTiempo{
         this.nombre = nombre;
     }
 
+    public RedSocial(String nombre, int tiempoConectado, int like) {
+        super(tiempoConectado, like);
+        this.nombre = nombre;
+    }
+    
+    
+
     public String getNombre() {
         return nombre;
     }

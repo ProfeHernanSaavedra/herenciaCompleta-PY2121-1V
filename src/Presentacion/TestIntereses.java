@@ -1,7 +1,8 @@
 
 package Presentacion;
 
-import Negocio.Musica;
+import Datos.Coleccion;
+import Negocio.*;
 
 /**
  *
@@ -11,7 +12,22 @@ public class TestIntereses {
     
     public static void main(String[] args) {
         
-        Musica musica = new Musica("POP", "yo", "123",10);
+        Interes musica = new Musica("POP", 120, 10);
+        musica.setUsuario("juanito");
+        musica.setContraseña("123");
+        RedSocial rs = new RedSocial("Instagram",180, 50);
+        TvSeries ts = new TvSeries("TERROR", 240, 5);
+        
+        Coleccion col = new Coleccion();
+        
+        col.agregarIntereses(musica);
+        col.agregarIntereses(rs);
+        col.agregarIntereses(ts);
+        
+        col.mostrarLista();
+        
+        col.masLike();
+        col.masTiempoConectado();
         
         
     }

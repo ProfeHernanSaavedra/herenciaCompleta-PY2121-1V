@@ -7,6 +7,6 @@ package Negocio;
  */
 public interface ILikeTiempo {
     
+    //public abstract void gustosTiempo(int likes, int tiempo);
     void gustosTiempo(int likes, int tiempo);
-    
 }

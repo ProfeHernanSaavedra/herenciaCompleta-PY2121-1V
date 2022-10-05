@@ -17,6 +17,12 @@ public class TvSeries extends Interes implements ILikeTiempo{
         this.genero = genero;
     }
 
+    public TvSeries(String genero, int tiempoConectado, int like) {
+        super(tiempoConectado, like);
+        this.genero = genero;
+    }
+    
+    
     public String getGenero() {
         return genero;
     }

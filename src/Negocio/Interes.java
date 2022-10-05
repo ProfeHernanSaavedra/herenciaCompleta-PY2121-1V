@@ -4,10 +4,11 @@ package Negocio;
  *
  * @author USRVI-LC2
  */
-public class Interes {
+public abstract class Interes {
     
     protected String usuario,contraseña;
     protected int tiempoConectado;
+    protected int like;
 
     public Interes() {
     }
@@ -18,6 +19,19 @@ public class Interes {
         this.tiempoConectado = tiempoConectado;
     }
 
+    public Interes(int tiempoConectado, int like) {
+        this.tiempoConectado = tiempoConectado;
+        this.like = like;
+    }
+
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+    
     public String getUsuario() {
         return usuario;
     }
@@ -44,13 +58,9 @@ public class Interes {
 
     @Override
     public String toString() {
-        return "Interes{" + "usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", tiempoConectado=" + tiempoConectado + '}';
+        return "Interes{" + "usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", tiempoConectado=" + tiempoConectado +" Likes: " + like+ '}';
     }
     
-    public void metodoSobreescrito(){
-        
-        System.out.println("Usuario: " + this.getUsuario());
-        
-    }
+    public abstract void metodoSobreescrito();
     
 }
